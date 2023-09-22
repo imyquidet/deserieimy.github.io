@@ -1,0 +1,364 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #0B0C10;
+    font-family: 'Kameron';
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-color: #0B0C10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #66FCF1;
+    text-align: center;
+}
+
+
+.navbar{
+    width: 100%;
+    padding: 35px 0;
+    display: flex;
+    justify-content: right;
+    position: fixed;
+    z-index: 2;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #66FCF1;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #ECECEC;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+.content h1 {
+    margin-top: 90px;
+    font-size: 130px;
+    font-weight: 700;
+    color: #66FCF1;
+   
+    animation: fade 2s infinite alternate;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5; /* Adjust opacity level */
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+
+.content p, .border p{
+    font-size: 24px;
+    color: #FFF;
+}
+
+.content h2, .border h2 {
+    font-size: 32px;
+    color: #45829E;
+}
+
+button.button {
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 50px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #66FCF1;
+    background: transparent;
+    color: #FFF;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Your existing CSS code for the arrow animation */
+.arrow{
+    position: absolute;
+    margin-top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.arrow span{
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-bottom: 5px solid #45829E;
+    border-right: 5px solid #45829E;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: scroll 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -.4s;
+}
+@keyframes scroll{
+    0%{
+        opacity: 1;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+}
+
+#my-expertise {
+    margin-top: 50px;
+    padding: 20px;
+}
+#my-expertise h2, #projects h2, #certifications h2{
+color: #66FCF1;
+font-size: 90px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+display: flex;
+justify-content: center;
+margin-top: 110px;
+}
+
+
+/* Style for the container div inside the "My Expertise" section */
+.rectangle {
+    display: flex;
+    justify-content: space-between; /* Distribute child elements evenly */
+}
+
+/* Style for each of the inline rectangles */
+.rectangle > div {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: transparent; 
+    border: 2px solid #66FCF1; 
+    text-align: center;
+}
+.rectangle > div:hover {
+    border-color: #FF6B6B; /* Change border color on hover */
+    width: 400px;
+    transition: 0.5s;
+   
+}
+.pic{
+    width: 380px;
+    height: 395px;
+    margin-left: 20px;
+    overflow: hidden; /* Ensure the image doesn't overflow the rectangle */
+    position: relative;
+}
+.pic img{
+    max-width: 100%; /* Scale image width to fit the rectangle */
+    max-height: 100%; /* Scale image height to fit the rectangle */
+    display: block; /* Remove extra space under the image (inline-block) */
+    margin: 0 auto; /* Center the image horizontally (optional) */
+}
+.basics, .design,.backend{
+    width: 300px;
+    height: 395px;
+    position: relative; 
+}
+
+.basics img, .design img,.backend img{
+
+    align-items: center;
+    margin-top: 20%;
+}
+
+/* Style for the label inside the "basics" rectangle */
+.label {
+    width: 100%; /* Set the width to 100% to fill the width of the "basics" rectangle */
+    height: 50px; /* Set the desired height for the label */
+    background-color: #1b1616e3;
+    color: #ffffff; /* Set text color for the label */
+    text-align: center; /* Center the label text horizontally */
+    line-height: 50px; /* Center the label text vertically */
+    font-weight: bold; /* Apply bold font style (optional) */
+    font-size: larger;
+}
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background: #66FCF1;
+    top: 0;
+    left: 50%;
+    margin-left:-3px;
+}
+.container{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    border: 2px solid #66FCF1;
+}
+.text-box{
+    padding: 20px 30px;
+    border-radius: 6px;
+    font-size: 20px;
+    color: #FFF;
+}
+.text-box small{
+    color: #45829E;
+}
+.left{
+    left: 0;
+    z-index: 2;
+}
+.right{
+    left: 50%;
+    z-index: 1;
+}
+.left img:hover{
+    -webkit-transform:scale(1.5); /* or some other value */
+       transform:scale(1.5);
+       transition: 0.5s;
+   }
+   .right img:hover{
+       -webkit-transform:scale(1.5); /* or some other value */
+          transform:scale(1.5);
+          transition: 0.5s;
+      }
+.certifications{
+    margin-top: 50px;
+    padding: 20px;
+}
+.cert {
+    display: flex;
+    justify-content: space-between; /* Distribute child elements evenly */
+}
+
+
+/* Style for each of the inline rectangles */
+.cert > div {
+    flex: 1;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: transparent; 
+    border: 2px solid #66FCF1; 
+    text-align: center;
+    
+}
+.webdesign,.mysql,.ojt{
+    width: 2px;
+    height: 510px;
+    position: relative; 
+}
+.webdesign img,.mysql img,.ojt img{
+    max-width: 100%; /* Scale image width to fit the rectangle */
+    max-height: 100%; /* Scale image height to fit the rectangle */
+    display: block; /* Remove extra space under the image (inline-block) */
+    margin: 0 auto; /* Center the image horizontally (optional) */
+    animation: bounce 2s infinite alternate; /* Apply the animation */
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(0); /* Start position */
+    }
+    100% {
+        transform: translateY(-8px); /* End position (move upward) */
+    }
+}
+#contact {
+    padding: 50px 0;
+    color: #66FCF1;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #66FCF1;
+    border-radius: 10px;
+    
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contact-card, .social-media {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-card h3, .social-media h3 {
+    margin-top: 20px;
+}
+.contact-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-card ul li {
+    margin-top: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 30px;
+    color: #66FCF1;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #FF6B6B;
+}
